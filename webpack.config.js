@@ -8,10 +8,24 @@ module.exports = {
   mode,
   target,
   devtool,
-  entry: path.resolve(__dirname, "src", "index.js"),
+  entry: ["@babel/polyfill", path.resolve(__dirname, "src", "index.js")],
   output: {
     path: path.resolve(__dirname, "build"),
     clean: true,
     filename: "index.[contenthash].js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
+      },
+    ],
   },
 };
