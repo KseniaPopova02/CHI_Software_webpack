@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__nav">
+          <a href="index.html" class="header__logo">
+            <img src="./images/Logo.png" alt="logo" />
+          </a>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="index.html" class="menu__list-link menu__list-active"
+                  >Home</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a href="tags.html" class="menu__list-link menu__list-active"
+                  >Tags</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a href="about.html" class="menu__list-link menu__list-active"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="button__wrapper" id="buttonWrapper">
+            <button
+              class="burger__button"
+              id="burgerButton"
+              aria-label="Main Menu"
+            >
+              <svg
+                width="2em"
+                height="2em"
+                viewBox="0 0 100 100"
+                fill="currentColor"
+              >
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="burger__nav-wrapper" id="burgerNavWrapper">
+            <nav class="burger__nav">
+              <ul class="burger__list">
+                <li class="burger__list-item">
+                  <a href="index.html" class="burger__list-link">Home</a>
+                </li>
+                <li class="burger__list-item">
+                  <a href="tags.html" class="burger__list-link">Tags</a>
+                </li>
+                <li class="burger__list-item">
+                  <a href="about.html" class="burger__list-link">About</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="burger__input">
+              <button class="burger__button-login">Login</button>
+              <div class="burger__button-wrapper">
+                <button class="burger__button-magnifier" id="burgerMagnifier">
+                  <img src="./images/search.png" alt="search button" />
+                </button>
+                <input type="text" class="burger__input2" id="burgerInput" />
+              </div>
+            </div>
+          </div>
+
+          <div class="header__button">
+            <div class="header__button-wrapper">
+              <input type="text" class="header__input" id="headerInput" />
+              <button class="header__button-magnifier" id="magnifier">
+                <img src="./images/search.png" alt="search button" />
+              </button>
+            </div>
+
+            <button class="header__button-login">Login</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="search">
+      <div class="container">
+        <div class="search__wrapper">
+          <div class="search__input-wrapper">
+            <input
+              id="searchInput"
+              class="search__input"
+              placeholder="Find the topics you care about..."
+            />
+            <button class="search__button">
+              <img src="./images/search.png" alt="search button" />
+            </button>
+          </div>
+          <div class="search__tags-wrapper">
+            <ul class="search__tags">
+              <li class="search__tags-item">#technology</li>
+              <li class="search__tags-item">#lifeandlove</li>
+              <li class="search__tags-item">#essentialism</li>
+              <li class="search__tags-item">#webdevelopment</li>
+              <li class="search__tags-item">#fashion</li>
+              <li class="search__tags-item">#lifestyle</li>
+              <li class="search__tags-item">#architecture</li>
+              <li class="search__tags-item">#sports</li>
+              <li class="search__tags-item">#entertainment</li>
+              <li class="search__tags-item">#culinaryarts</li>
+              <li class="search__tags-item">#travel</li>
+              <li class="search__tags-item">#worldhistory</li>
+              <li class="search__tags-item">#aeronautics</li>
+              <li class="search__tags-item">#minimalism</li>
+              <li class="search__tags-item">#finearts</li>
+              <li class="search__tags-item">#graphicdesign</li>
+              <li class="search__tags-item">#filmmaking</li>
+              <li class="search__tags-item">#bitcoin</li>
+              <li class="search__tags-item">#computers</li>
+              <li class="search__tags-item">#machinelearning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="cross.js"></script>
+    <script type="module" src="nav.js"></script>
+    <script type="module" src="magnifier.js"></script>
+    <script src="tags.js"></script>
+  </body>
+</html>
