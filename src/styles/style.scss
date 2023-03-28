@@ -101,7 +101,7 @@
     position: relative;
   }
   &__background {
-    background-image: url("../images/article_image.jpg");
+    background-image: url("/src/images/article_image.jpg");
     height: 592px;
   }
   &__article {
@@ -176,7 +176,7 @@
     position: relative;
   }
   &__background {
-    background-image: url("/images/interior_mage.jpg");
+    background-image: url("/src/images/interior_mage.jpg");
     height: 592px;
   }
 }
@@ -568,7 +568,7 @@
 .article {
   margin-top: 52px;
   &__img {
-    background-image: url("/images/article_image.jpg");
+    background-image: url("/src/images/article_image.jpg");
     background-position: center;
     height: 592px;
   }
