@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve",
-    "simple-build": "webpack",
-    "dev": "webpack --mode development",
-    "prod": "webpack --node-env=production"
+    "dev": "webpack",
+    "prod": "webpack --node-env=production",
+    "clear": "rd /s /q dist"
   },
   "keywords": [],
   "author": "",
