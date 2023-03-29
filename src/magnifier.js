@@ -43,23 +43,23 @@
 
 //Option without local storage
 
-import { toggleFunction } from "./main.js";
+export const openInputSpace = () => {
+  const button = document.getElementById("magnifier");
+  const button2 = document.getElementById("burgerMagnifier");
+  const inputHeader = document.getElementById("headerInput");
+  const inputBurger = document.getElementById("burgerInput");
 
-const button = document.getElementById("magnifier");
-const button2 = document.getElementById("burgerMagnifier");
-const inputHeader = document.getElementById("headerInput");
-const inputBurger = document.getElementById("burgerInput");
+  const changePage = (e) => {
+    if (e.key === "Enter") {
+      const value = inputHeader.value || inputBurger.value;
+      e.preventDefault;
+      window.location.href = `./tags.html?search=${value}`;
+    }
+  };
 
-const changePage = (e) => {
-  if (e.key === "Enter") {
-    const value = inputHeader.value || inputBurger.value;
-    e.preventDefault;
-    window.location.href = `./tags.html?search=${value}`;
-  }
+  button.addEventListener("click", toggleClass(inputHeader, "show__input"));
+  button2.addEventListener("click", toggleClass(inputBurger, "show__input"));
+
+  inputHeader.addEventListener("keypress", changePage);
+  inputBurger.addEventListener("keypress", changePage);
 };
-
-button.addEventListener("click", toggleFunction(inputHeader, "show__input"));
-button2.addEventListener("click", toggleFunction(inputBurger, "show__input"));
-
-inputHeader.addEventListener("keypress", changePage);
-inputBurger.addEventListener("keypress", changePage);

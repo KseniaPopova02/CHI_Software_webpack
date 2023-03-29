@@ -1,6 +1,6 @@
-import { toggleFunction } from "./main.js";
+export const showNav = () => {
+  const burgerButton = document.getElementById("burgerButton");
+  const burgerNav = document.getElementById("burgerNavWrapper");
 
-const burgerButton = document.getElementById("burgerButton");
-const burgerNav = document.getElementById("burgerNavWrapper");
-
-burgerButton.addEventListener("click", toggleFunction(burgerNav, "show__nav"));
+  burgerButton.addEventListener("click", toggleClass(burgerNav, "show__nav"));
+};

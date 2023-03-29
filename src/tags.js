@@ -30,43 +30,45 @@
 
 //Option without local storage
 
-const searchInput = document.getElementById("searchInput");
-const searchTags = document.querySelectorAll(".search__tags li");
+export const sortTagsList = () => {
+  const searchInput = document.getElementById("searchInput");
+  const searchTags = document.querySelectorAll(".search__tags li");
 
-const insertMark = (string, value) =>
-  string.replace(
-    new RegExp(`([\s\S])*(${value})([\s\S])*`, "g"),
-    "$1<mark>$2</mark>$3"
+  const insertMark = (string, value) =>
+    string.replace(
+      new RegExp(`([\s\S])*(${value})([\s\S])*`, "g"),
+      "$1<mark>$2</mark>$3"
+    );
+
+  const filterList = (filter) => {
+    searchTags.forEach((elem) => {
+      const text = elem.textContent;
+
+      if (!text.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
+        elem.classList.add("hide");
+      } else {
+        elem.classList.remove("hide");
+
+        const str = elem.innerText;
+        const result = insertMark(str, filter);
+
+        elem.innerHTML = result;
+      }
+    });
+  };
+
+  searchInput.addEventListener("input", (event) =>
+    filterList(event.target.value)
   );
 
-const filterList = (filter) => {
-  searchTags.forEach((elem) => {
-    const text = elem.textContent;
+  const getSearchItem = () => {
+    const queryParams = window.location.search.slice(1).split("=");
+    return queryParams[1] || "";
+  };
 
-    if (!text.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
-      elem.classList.add("hide");
-    } else {
-      elem.classList.remove("hide");
+  const savedValue = getSearchItem();
 
-      const str = elem.innerText;
-      const result = insertMark(str, filter);
+  searchInput.value = savedValue;
 
-      elem.innerHTML = result;
-    }
-  });
+  filterList(savedValue);
 };
-
-searchInput.addEventListener("input", (event) =>
-  filterList(event.target.value)
-);
-
-const getSearchItem = () => {
-  const queryParams = window.location.search.slice(1).split("=");
-  return queryParams[1] || "";
-};
-
-const savedValue = getSearchItem();
-
-searchInput.value = savedValue;
-
-filterList(savedValue);

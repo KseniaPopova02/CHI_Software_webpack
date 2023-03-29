@@ -1,5 +1,5 @@
-export * from "./cross";
-export * from "./magnifier";
-export * from "./main";
-export * from "./nav";
-export * from "./tags";
+import { openInputSpace } from "./magnifier";
+import { animateCrossMenu } from "./cross";
+import { toggleClass } from "./main";
+import { showNav } from "./nav";
+import { sortTagsList } from "./tags";
