@@ -58,6 +58,13 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.ttf/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name].[ext]',
+                },
+            },
         ],
     },
 };
