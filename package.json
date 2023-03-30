@@ -17,6 +17,7 @@
         "@babel/core": "^7.21.3",
         "@babel/preset-env": "^7.20.2",
         "babel-loader": "^9.1.2",
+        "css-loader": "^6.7.3",
         "eslint": "^8.37.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",
@@ -27,19 +28,14 @@
         "html-webpack-plugin": "^5.5.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
+        "mini-css-extract-plugin": "^2.7.5",
         "prettier": "2.8.7",
+        "sass": "^1.60.0",
+        "sass-loader": "^13.2.2",
+        "style-loader": "^3.3.2",
         "webpack": "^5.76.3",
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.13.1"
     },
-    "description": "",
-    "dependencies": {
-        "@babel/polyfill": "^7.12.1"
-    },
-    "lint-staged": {
-        "**/*.js": [
-            "eslint --fix",
-            "prettier --write --ignore-unknown"
-        ]
-    }
+    "description": ""
 }

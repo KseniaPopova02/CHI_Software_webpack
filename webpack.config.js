@@ -5,6 +5,7 @@ const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode,
@@ -33,6 +34,9 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'tags.html'),
             filename: 'tags.html',
         }),
+        new MiniCssExtractPlugin({
+            filename: 'index.[contenthash].css',
+        }),
     ],
     module: {
         rules: [
@@ -47,6 +51,12 @@ module.exports = {
                         ],
                     },
                 },
+                test1: /\.(c|sa|sc)ss$/i,
+                use2: [
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
         ],
     },
