@@ -1,7 +1,5 @@
-function component(text) {
-  const element = document.createElement("h1");
-  element.textContent = text;
-  return element;
-}
-
-document.body.prepend(component("Проект собран на Webpack"));
+import { openInputSpace } from "./magnifier";
+import { animateCrossMenu } from "./cross";
+import { toggleClass } from "./main";
+import { showNav } from "./nav";
+import { sortTagsList } from "./tags";

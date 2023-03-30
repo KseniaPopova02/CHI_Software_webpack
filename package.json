@@ -1,22 +1,44 @@
 {
-  "name": "chi_software_webpack",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve",
-    "dev": "webpack",
-    "prod": "webpack --node-env=production",
-    "clear": "rd /s /q dist"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.76.3",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.13.1"
-  },
-  "description": ""
+    "name": "chi_software_webpack",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack serve",
+        "dev": "webpack",
+        "prod": "webpack --node-env=production",
+        "clear": "rd /s /q dist",
+        "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.21.3",
+        "@babel/preset-env": "^7.20.2",
+        "babel-loader": "^9.1.2",
+        "eslint": "^8.37.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-node": "^11.1.0",
+        "html-webpack-plugin": "^5.5.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.0",
+        "prettier": "2.8.7",
+        "webpack": "^5.76.3",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.1"
+    },
+    "description": "",
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1"
+    },
+    "lint-staged": {
+        "**/*.js": [
+            "eslint --fix",
+            "prettier --write --ignore-unknown"
+        ]
+    }
 }
