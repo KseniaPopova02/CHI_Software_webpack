@@ -16,6 +16,7 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         clean: true,
         filename: 'index.[contenthash].js',
+        assetModuleFilename: 'assets/[hash][ext]',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -64,6 +65,33 @@ module.exports = {
                 generator: {
                     filename: 'fonts/[name].[ext]',
                 },
+            },
+            {
+                test: /\.jpe?g$|\.gif$|\.png|\.ico|\.svg$/i,
+                use: {
+                    loader: 'image-webpack-loader',
+                    options: {
+                        mozjpeg: {
+                            progressive: true,
+                        },
+                        // optipng.enabled: false will disable optipng
+                        optipng: {
+                            enabled: false,
+                        },
+                        pngquant: {
+                            quality: [0.65, 0.9],
+                            speed: 4,
+                        },
+                        gifsicle: {
+                            interlaced: false,
+                        },
+                        // the webp option will enable WEBP
+                        webp: {
+                            quality: 75,
+                        },
+                    },
+                },
+                type: 'asset/resource',
             },
         ],
     },

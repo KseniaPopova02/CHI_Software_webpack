@@ -1,363 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
-  <body id="body">
-    <header class="header">
-      <div class="container">
-        <div class="header__nav">
-          <a href="index.html" class="header__logo">
-            <img src="./images/Logo.png" alt="logo" />
-          </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="./styles/normalize.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body id="body">
+        <header class="header">
+            <div class="container">
+                <div class="header__nav">
+                    <a href="index.html" class="header__logo">
+                        <img src="images/Logo.png" alt="logo" />
+                    </a>
 
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a href="index.html" class="menu__list-link menu__list-active"
-                  >Home</a
-                >
-              </li>
-              <li class="menu__list-item">
-                <a href="tags.html" class="menu__list-link menu__list-active"
-                  >Tags</a
-                >
-              </li>
-              <li class="menu__list-item">
-                <a href="about.html" class="menu__list-link menu__list-active"
-                  >About</a
-                >
-              </li>
-            </ul>
-          </nav>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a
+                                    href="index.html"
+                                    class="menu__list-link menu__list-active"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="menu__list-item">
+                                <a
+                                    href="tags.html"
+                                    class="menu__list-link menu__list-active"
+                                    >Tags</a
+                                >
+                            </li>
+                            <li class="menu__list-item">
+                                <a
+                                    href="about.html"
+                                    class="menu__list-link menu__list-active"
+                                    >About</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
 
-          <div class="button__wrapper" id="buttonWrapper">
-            <button
-              class="burger__button"
-              id="burgerButton"
-              aria-label="Main Menu"
-            >
-              <svg
-                width="2em"
-                height="2em"
-                viewBox="0 0 100 100"
-                fill="currentColor"
-              >
-                <path
-                  class="line line1"
-                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-                />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path
-                  class="line line3"
-                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-                />
-              </svg>
-            </button>
-          </div>
+                    <div class="button__wrapper" id="buttonWrapper">
+                        <button
+                            class="burger__button"
+                            id="burgerButton"
+                            aria-label="Main Menu">
+                            <svg
+                                width="2em"
+                                height="2em"
+                                viewBox="0 0 100 100"
+                                fill="currentColor">
+                                <path
+                                    class="line line1"
+                                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                                <path class="line line2" d="M 20,50 H 80" />
+                                <path
+                                    class="line line3"
+                                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                        </button>
+                    </div>
 
-          <div class="burger__nav-wrapper" id="burgerNavWrapper">
-            <nav class="burger__nav">
-              <ul class="burger__list">
-                <li class="burger__list-item">
-                  <a href="index.html" class="burger__list-link">Home</a>
-                </li>
-                <li class="burger__list-item">
-                  <a href="tags.html" class="burger__list-link">Tags</a>
-                </li>
-                <li class="burger__list-item">
-                  <a href="about.html" class="burger__list-link">About</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="burger__input">
-              <button class="burger__button-login">Login</button>
-              <div class="burger__button-wrapper">
-                <button class="burger__button-magnifier" id="burgerMagnifier">
-                  <img src="./images/search.png" alt="search button" />
-                </button>
-                <input type="text" class="burger__input2" id="burgerInput" />
-              </div>
-            </div>
-          </div>
+                    <div class="burger__nav-wrapper" id="burgerNavWrapper">
+                        <nav class="burger__nav">
+                            <ul class="burger__list">
+                                <li class="burger__list-item">
+                                    <a
+                                        href="index.html"
+                                        class="burger__list-link"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="burger__list-item">
+                                    <a
+                                        href="tags.html"
+                                        class="burger__list-link"
+                                        >Tags</a
+                                    >
+                                </li>
+                                <li class="burger__list-item">
+                                    <a
+                                        href="about.html"
+                                        class="burger__list-link"
+                                        >About</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="burger__input">
+                            <button class="burger__button-login">Login</button>
+                            <div class="burger__button-wrapper">
+                                <button
+                                    class="burger__button-magnifier"
+                                    id="burgerMagnifier">
+                                    <img
+                                        src="./images/search.png"
+                                        alt="search button" />
+                                </button>
+                                <input
+                                    type="text"
+                                    class="burger__input2"
+                                    id="burgerInput" />
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="header__button">
-            <div class="header__button-wrapper">
-              <input type="text" class="header__input" id="headerInput" />
-              <button class="header__button-magnifier" id="magnifier">
-                <img src="./images/search.png" alt="search button" />
-              </button>
-            </div>
-            <button class="header__button-login">Login</button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="top">
-      <h1 style="display: none"></h1>
-      <h2 style="display: none"></h2>
-      <div class="container">
-        <div class="top__wrapper">
-          <a href="article.html">
-            <div class="top__background"></div>
-            <div class="top__article">
-              <div class="top__article-pretitle pretitle">Featured article</div>
-              <h3 class="top__article-title title">
-                World’s Most Dangerous Technology Ever Made.
-              </h3>
-              <div class="top__article-info info">
-                Ralph Hawkins ● May 7, 2019 (10 mins read)
-              </div>
-              <p class="top__article-text text">
-                Proident aliquip velit qui commodo officia qui consectetur dolor
-                ullamco aliquip elit incididunt. Ea minim ex consectetur
-                excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
-                aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
-                mollit nulla consequat velit magna.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="editor">
-      <div class="container">
-        <div class="editor__name">Editor’s Picks</div>
-        <div class="editor__article">
-          <a class="editor__article-image" href="article.html">
-            <img
-              class="editor__image"
-              src="./images/editors1.jpg"
-              alt="picture of a letter"
-            />
-          </a>
-
-          <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">Minimalism</div>
-            <h3 class="editor__article-title title">
-              <a href="article.html"
-                >Culpa sit Laboris Exercitation ea Fugiat</a
-              >
-            </h3>
-
-            <div class="editor__article-info info">
-              Leslie Pena ● 25, 2012 (6 mins read)
-            </div>
-            <p class="editor__article-text text">
-              Incididunt occaecat et qui dolore consectetur magna. Lorem veniam
-              ut et labore consequat ut ex sunt. Ut et nostrud aliquip do anim
-              proident ad nulla consectetur eu aute ex anim mollit. Anim aute
-              exercitation nisi fugiat.
-            </p>
-          </div>
-        </div>
-
-        <div class="editor__article">
-          <a class="editor__article-image" href="article.html">
-            <img
-              class="editor__image"
-              src="./images/editors2.jpg"
-              alt="picture of a dj console"
-            />
-          </a>
-          <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">Technology</div>
-            <h3 class="editor__article-title title">
-              <a href="article.html">Amet non Ex Officia nulla Cupidatat</a>
-            </h3>
-            <div class="editor__article-info info">
-              Jacob Henry ● September 27, 2017 (8 mins read)
-            </div>
-            <p class="editor__article-text text">
-              Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id
-              ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse.
-              Mollit incididunt cillum consectetur fugiat adipisicing dolor est
-              id minim amet cillum esse Lorem. Deserunt non duis excepteur
-              aliqua duis eu reprehenderit.
-            </p>
-          </div>
-        </div>
-        <div class="editor__article">
-          <a class="editor__article-image" href="article.html">
-            <img
-              class="editor__image"
-              src="./images/editors3.jpg"
-              alt="picture of a tower"
-            />
-          </a>
-          <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">Article</div>
-            <h3 class="editor__article-title title">
-              <a href="article.html">Dolor ex Tempor Cotur Culpa li</a>
-            </h3>
-            <div class="editor__article-info info">
-              Darrell Lane ● May 16, 2017 (3 mins read)
-            </div>
-            <p class="editor__article-text text">
-              Incididunt sint nulla eu adipisicing eu reprehenderit proident
-              consequat est. Nisi consectetur incididunt mollit officia ut
-              cupidatat laborum proident eu velit Lorem deserunt deserunt
-              voluptate. Proident nostrud laborum reprehenderit culpa irure id
-              labore do ad do minim nisi. Incididunt ex.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="middle">
-      <div class="container">
-        <a href="article.html">
-          <div class="middle__wrapper">
-            <div class="middle__background"></div>
-            <div class="middle__article">
-              <div class="middle__article-pretitle pretitle">Interior</div>
-              <h3 class="middle__article-title title">
-                <a href="article.html">Laborum Ullamco Sunt id ut Sunt</a>
-              </h3>
-              <div class="middle__article-info info">
-                Bessie Hawkins ● May 7, 2019 (10 mins read)
-              </div>
-              <p class="middle__article-text text">
-                Proident aliquip velit qui commodo officia qui consectetur dolor
-                ullamco aliquip elit incididunt. Ea minim ex consectetur
-                excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
-                aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
-                mollit nulla consequat velit magna.
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="articles">
-      <div class="container">
-        <div class="articles__wrapper">
-          <div class="articles__column">
-            <div class="articles__article">
-              <a class="articles__img" href="article.html">
-                <img src="./images/articles1.jpg" alt="picture of waves" />
-              </a>
-
-              <div class="articles__content">
-                <div class="articles__pretitle pretitle">Nature</div>
-                <h3 class="articles__title title">
-                  <a href="article.html">Tempor deserunt Sunt Qui</a>
-                </h3>
-                <div class="articles__info info">
-                  Connie Robertson ● November 3, 2012
+                    <div class="header__button">
+                        <div class="header__button-wrapper">
+                            <input
+                                type="text"
+                                class="header__input"
+                                id="headerInput" />
+                            <button
+                                class="header__button-magnifier"
+                                id="magnifier">
+                                <img
+                                    src="./images/search.png"
+                                    alt="search button" />
+                            </button>
+                        </div>
+                        <button class="header__button-login">Login</button>
+                    </div>
                 </div>
-                <div class="articles__text text">
-                  Ea qui dolor aute cupidatat ad pariatur proident. Mollit nulla
-                  tempor aute reprehenderit ut dolore mollit nisi consequat
-                  excepteur ex officia pariatur irure.
-                </div>
-              </div>
             </div>
-
-            <div class="articles__article">
-              <a class="articles__img" href="article.html">
-                <img src="./images/articles2.jpg" alt="picture of a plant" />
-              </a>
-              <div class="articles__content">
-                <div class="articles__pretitle pretitle">Plants</div>
-                <h3 class="articles__title title">
-                  <a href="article.html">Occaecat Anim eu Qui</a>
-                </h3>
-                <div class="articles__info info">
-                  Eleanor Williamson ● September 28, 2014
+        </header>
+        <section class="top">
+            <h1 style="display: none"></h1>
+            <h2 style="display: none"></h2>
+            <div class="container">
+                <div class="top__wrapper">
+                    <a href="article.html">
+                        <div class="top__background"></div>
+                        <div class="top__article">
+                            <div class="top__article-pretitle pretitle">
+                                Featured article
+                            </div>
+                            <h3 class="top__article-title title">
+                                World’s Most Dangerous Technology Ever Made.
+                            </h3>
+                            <div class="top__article-info info">
+                                Ralph Hawkins ● May 7, 2019 (10 mins read)
+                            </div>
+                            <p class="top__article-text text">
+                                Proident aliquip velit qui commodo officia qui
+                                consectetur dolor ullamco aliquip elit
+                                incididunt. Ea minim ex consectetur excepteur.
+                                Ex laborum nostrud mollit sint consectetur Lorem
+                                amet aliqua do enim. Commodo duis dolor anim
+                                excepteur. In aliquip mollit nulla consequat
+                                velit magna.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-                <div class="articles__text text">
-                  Qui ipsum consectetur ad incididunt et aliquip exercitation
-                  laboris nisi reprehenderit. Et excepteur commodo esse enim ea
-                  aliqua officia reprehenderit.
-                </div>
-              </div>
             </div>
+        </section>
 
-            <div class="articles__article">
-              <a class="articles__img" href="article.html">
-                <img src="./images/articles3.jpg" alt="picture of food" />
-              </a>
-              <div class="articles__content">
-                <div class="articles__pretitle pretitle">Food</div>
-                <h3 class="articles__title title">
-                  <a href="article.html"
-                    >Fugiat Incididunt Voluptate Consequat</a
-                  >
-                </h3>
-                <div class="articles__info info">
-                  Bessie Watson ● June 13, 2012
+        <section class="editor">
+            <div class="container">
+                <div class="editor__name">Editor’s Picks</div>
+                <div class="editor__article">
+                    <a class="editor__article-image" href="article.html">
+                        <img
+                            class="editor__image"
+                            src="./images/editors1.jpg"
+                            alt="picture of a letter" />
+                    </a>
+
+                    <div class="editor__article-content">
+                        <div class="editor__article-pretitle pretitle">
+                            Minimalism
+                        </div>
+                        <h3 class="editor__article-title title">
+                            <a href="article.html"
+                                >Culpa sit Laboris Exercitation ea Fugiat</a
+                            >
+                        </h3>
+
+                        <div class="editor__article-info info">
+                            Leslie Pena ● 25, 2012 (6 mins read)
+                        </div>
+                        <p class="editor__article-text text">
+                            Incididunt occaecat et qui dolore consectetur magna.
+                            Lorem veniam ut et labore consequat ut ex sunt. Ut
+                            et nostrud aliquip do anim proident ad nulla
+                            consectetur eu aute ex anim mollit. Anim aute
+                            exercitation nisi fugiat.
+                        </p>
+                    </div>
                 </div>
-                <div class="articles__text text">
-                  Mollit ea culpa ipsum pariatur eiusmod. Irure et.
+
+                <div class="editor__article">
+                    <a class="editor__article-image" href="article.html">
+                        <img
+                            class="editor__image"
+                            src="./images/editors2.jpg"
+                            alt="picture of a dj console" />
+                    </a>
+                    <div class="editor__article-content">
+                        <div class="editor__article-pretitle pretitle">
+                            Technology
+                        </div>
+                        <h3 class="editor__article-title title">
+                            <a href="article.html"
+                                >Amet non Ex Officia nulla Cupidatat</a
+                            >
+                        </h3>
+                        <div class="editor__article-info info">
+                            Jacob Henry ● September 27, 2017 (8 mins read)
+                        </div>
+                        <p class="editor__article-text text">
+                            Sint anim Lorem aute duis Lorem incididunt. Nulla
+                            nostrud irure id ipsum aute excepteur duis sint. Do
+                            occaecat sit dolor magna esse. Mollit incididunt
+                            cillum consectetur fugiat adipisicing dolor est id
+                            minim amet cillum esse Lorem. Deserunt non duis
+                            excepteur aliqua duis eu reprehenderit.
+                        </p>
+                    </div>
                 </div>
-              </div>
+                <div class="editor__article">
+                    <a class="editor__article-image" href="article.html">
+                        <img
+                            class="editor__image"
+                            src="./images/editors3.jpg"
+                            alt="picture of a tower" />
+                    </a>
+                    <div class="editor__article-content">
+                        <div class="editor__article-pretitle pretitle">
+                            Article
+                        </div>
+                        <h3 class="editor__article-title title">
+                            <a href="article.html"
+                                >Dolor ex Tempor Cotur Culpa li</a
+                            >
+                        </h3>
+                        <div class="editor__article-info info">
+                            Darrell Lane ● May 16, 2017 (3 mins read)
+                        </div>
+                        <p class="editor__article-text text">
+                            Incididunt sint nulla eu adipisicing eu
+                            reprehenderit proident consequat est. Nisi
+                            consectetur incididunt mollit officia ut cupidatat
+                            laborum proident eu velit Lorem deserunt deserunt
+                            voluptate. Proident nostrud laborum reprehenderit
+                            culpa irure id labore do ad do minim nisi.
+                            Incididunt ex.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="articles__article">
-              <div class="articles__img">
+        <section class="middle">
+            <div class="container">
                 <a href="article.html">
-                  <img
-                    src="./images/articles4.jpg"
-                    alt="picture of a graphity wall"
-                  />
+                    <div class="middle__wrapper">
+                        <div class="middle__background"></div>
+                        <div class="middle__article">
+                            <div class="middle__article-pretitle pretitle">
+                                Interior
+                            </div>
+                            <h3 class="middle__article-title title">
+                                <a href="article.html"
+                                    >Laborum Ullamco Sunt id ut Sunt</a
+                                >
+                            </h3>
+                            <div class="middle__article-info info">
+                                Bessie Hawkins ● May 7, 2019 (10 mins read)
+                            </div>
+                            <p class="middle__article-text text">
+                                Proident aliquip velit qui commodo officia qui
+                                consectetur dolor ullamco aliquip elit
+                                incididunt. Ea minim ex consectetur excepteur.
+                                Ex laborum nostrud mollit sint consectetur Lorem
+                                amet aliqua do enim. Commodo duis dolor anim
+                                excepteur. In aliquip mollit nulla consequat
+                                velit magna.
+                            </p>
+                        </div>
+                    </div>
                 </a>
-              </div>
-              <div class="articles__content">
-                <div class="articles__pretitle pretitle">Colorful</div>
-                <h3 class="articles__title title">
-                  <a href="article.html">Occaecat Anim eu Qui</a>
-                </h3>
-                <div class="articles__info info">
-                  Ted Simmmons ● June 21, 2015
-                </div>
-                <div class="articles__text text">
-                  Amet ipsum occaecat aliqua aute nisi laboris nostrud culpa est
-                  do. Aliqua esse velit in excepteur esse qui voluptate laboris
-                  adipisicing qui irure elit amet excepteur.
-                </div>
-              </div>
             </div>
-          </div>
+        </section>
 
-          <div class="articles__tags">
-            <div class="articles__tags-specific name">tags.</div>
-            <div class="articles__tags-column">
-              <div class="articles__tags-specific">Technology</div>
-              <div class="articles__tags-specific">Open Source</div>
-              <div class="articles__tags-specific">JavaScript</div>
-              <div class="articles__tags-specific">Minimalism</div>
-              <div class="articles__tags-specific">Self-help</div>
-              <div class="articles__tags-specific">Animals</div>
-              <div class="articles__tags-specific">Herbivores</div>
-              <div class="articles__tags-specific">HTML</div>
-              <div class="articles__tags-specific">CSS</div>
-              <div class="articles__tags-specific">PHP</div>
+        <section class="articles">
+            <div class="container">
+                <div class="articles__wrapper">
+                    <div class="articles__column">
+                        <div class="articles__article">
+                            <a class="articles__img" href="article.html">
+                                <img
+                                    src="./images/articles1.jpg"
+                                    alt="picture of waves" />
+                            </a>
 
-              <div class="articles__tags-specific">Web Technologies</div>
-              <div class="articles__tags-specific">Career</div>
-              <div class="articles__tags-specific">Life</div>
-              <div class="articles__tags-specific">Spirituality</div>
-              <div class="articles__tags-specific">Food</div>
-              <div class="articles__tags-specific">Cooking</div>
-              <div class="articles__tags-specific">Sports</div>
-              <div class="articles__tags-specific">Racing</div>
-              <div class="articles__tags-specific">Mountain Hiking</div>
+                            <div class="articles__content">
+                                <div class="articles__pretitle pretitle">
+                                    Nature
+                                </div>
+                                <h3 class="articles__title title">
+                                    <a href="article.html"
+                                        >Tempor deserunt Sunt Qui</a
+                                    >
+                                </h3>
+                                <div class="articles__info info">
+                                    Connie Robertson ● November 3, 2012
+                                </div>
+                                <div class="articles__text text">
+                                    Ea qui dolor aute cupidatat ad pariatur
+                                    proident. Mollit nulla tempor aute
+                                    reprehenderit ut dolore mollit nisi
+                                    consequat excepteur ex officia pariatur
+                                    irure.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="articles__article">
+                            <a class="articles__img" href="article.html">
+                                <img
+                                    src="./images/articles2.jpg"
+                                    alt="picture of a plant" />
+                            </a>
+                            <div class="articles__content">
+                                <div class="articles__pretitle pretitle">
+                                    Plants
+                                </div>
+                                <h3 class="articles__title title">
+                                    <a href="article.html"
+                                        >Occaecat Anim eu Qui</a
+                                    >
+                                </h3>
+                                <div class="articles__info info">
+                                    Eleanor Williamson ● September 28, 2014
+                                </div>
+                                <div class="articles__text text">
+                                    Qui ipsum consectetur ad incididunt et
+                                    aliquip exercitation laboris nisi
+                                    reprehenderit. Et excepteur commodo esse
+                                    enim ea aliqua officia reprehenderit.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="articles__article">
+                            <a class="articles__img" href="article.html">
+                                <img
+                                    src="./images/articles3.jpg"
+                                    alt="picture of food" />
+                            </a>
+                            <div class="articles__content">
+                                <div class="articles__pretitle pretitle">
+                                    Food
+                                </div>
+                                <h3 class="articles__title title">
+                                    <a href="article.html"
+                                        >Fugiat Incididunt Voluptate
+                                        Consequat</a
+                                    >
+                                </h3>
+                                <div class="articles__info info">
+                                    Bessie Watson ● June 13, 2012
+                                </div>
+                                <div class="articles__text text">
+                                    Mollit ea culpa ipsum pariatur eiusmod.
+                                    Irure et.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="articles__article">
+                            <div class="articles__img">
+                                <a href="article.html">
+                                    <img
+                                        src="./images/articles4.jpg"
+                                        alt="picture of a graphity wall" />
+                                </a>
+                            </div>
+                            <div class="articles__content">
+                                <div class="articles__pretitle pretitle">
+                                    Colorful
+                                </div>
+                                <h3 class="articles__title title">
+                                    <a href="article.html"
+                                        >Occaecat Anim eu Qui</a
+                                    >
+                                </h3>
+                                <div class="articles__info info">
+                                    Ted Simmmons ● June 21, 2015
+                                </div>
+                                <div class="articles__text text">
+                                    Amet ipsum occaecat aliqua aute nisi laboris
+                                    nostrud culpa est do. Aliqua esse velit in
+                                    excepteur esse qui voluptate laboris
+                                    adipisicing qui irure elit amet excepteur.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="articles__tags">
+                        <div class="articles__tags-specific name">tags.</div>
+                        <div class="articles__tags-column">
+                            <div class="articles__tags-specific">
+                                Technology
+                            </div>
+                            <div class="articles__tags-specific">
+                                Open Source
+                            </div>
+                            <div class="articles__tags-specific">
+                                JavaScript
+                            </div>
+                            <div class="articles__tags-specific">
+                                Minimalism
+                            </div>
+                            <div class="articles__tags-specific">Self-help</div>
+                            <div class="articles__tags-specific">Animals</div>
+                            <div class="articles__tags-specific">
+                                Herbivores
+                            </div>
+                            <div class="articles__tags-specific">HTML</div>
+                            <div class="articles__tags-specific">CSS</div>
+                            <div class="articles__tags-specific">PHP</div>
+
+                            <div class="articles__tags-specific">
+                                Web Technologies
+                            </div>
+                            <div class="articles__tags-specific">Career</div>
+                            <div class="articles__tags-specific">Life</div>
+                            <div class="articles__tags-specific">
+                                Spirituality
+                            </div>
+                            <div class="articles__tags-specific">Food</div>
+                            <div class="articles__tags-specific">Cooking</div>
+                            <div class="articles__tags-specific">Sports</div>
+                            <div class="articles__tags-specific">Racing</div>
+                            <div class="articles__tags-specific">
+                                Mountain Hiking
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="cross.js"></script>
-    <script type="module" src="nav.js"></script>
-    <script type="module" src="magnifier.js"></script>
-  </body>
+        </section>
+        <script src="cross.js"></script>
+        <script type="module" src="nav.js"></script>
+        <script type="module" src="magnifier.js"></script>
+    </body>
 </html>
